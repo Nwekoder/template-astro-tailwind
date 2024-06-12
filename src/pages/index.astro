@@ -1,0 +1,59 @@
+---
+import Layout from "../components/Layout.astro"
+
+import HeaderMid from "../components/Headers/Mid.astro"
+import ButtonPrimary from "../components/Buttons/ButtonPrimary.astro"
+---
+
+<Layout title="AstroLearn" description="Brought to you by Nwekoder from TeamBento">
+	<HeaderMid>
+		<h1 class="font-bold text-6xl mb-8 text-center">Ayo Belajar Astro!</h1>
+		<p class="text-center max-w-md mx-auto">
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit in aut dolor itaque excepturi fugit repellat. Aspernatur officia labore repellendus provident ad
+			veritatis amet asperiores minima eum tenetur! Error, doloribus.
+		</p>
+	</HeaderMid>
+
+	<div class="w-11/12 mx-auto">
+		<section class="py-8 min-h-screen grid grid-cols-2 items-center">
+			<div>
+				<h2 class="font-bold text-5xl mb-8">Kenapa harus Astro?</h2>
+				<p class="max-w-lg">
+					Karena Astro jauh lebih beginner-friendly dibandin framework lain. Framework ini juga cukup fleksibel karena dapat digabungkan dengan Front-End Framework lain
+					seperti React, Svelte, Vue dan masih banyak lagi.
+				</p>
+			</div>
+
+			<div></div>
+		</section>
+
+		<section class="py-8 min-h-screen grid grid-cols-2 items-center">
+			<div class="order-2 text-right">
+				<h2 class="font-bold text-5xl mb-8">Astro vs Next.js</h2>
+				<p class="max-w-lg ml-auto">
+					Next.js adalah meta-framework dari React, sedangkan Astro adalah framework yang bisa menggunakan beberapa Front-End framework secara bersamaan dalam suatu
+					project. Astro memberi kita lebih banyak kebebasan dalam memilih Front-End framework atau bahkan tidak menggunakan Front-End Framework sama sekali.
+				</p>
+			</div>
+
+			<div></div>
+		</section>
+
+		<section class="py-8 min-h-screen grid grid-cols-2 items-center">
+			<div>
+				<h2 class="font-bold text-5xl mb-8">Masih Pemula?</h2>
+				<p class="max-w-lg mb-8">
+					Silahkan lihat beberapa artikel bermanfaat yang kami kirim. Masih kurang paham? Tenang, admin kami termasuk dalam Grup Whatsapp <strong>Coding is Fun</strong>.
+					Disana kita tidak hanya membahas tentang Web Development, ada juga pembahasan seperti General Programming, Linux server bahkan Microcontroller.
+				</p>
+
+				<div class="flex items-center gap-4">
+					<p>Penasaran?</p>
+					<ButtonPrimary>Gabung Sekarang</ButtonPrimary>
+				</div>
+			</div>
+
+			<div></div>
+		</section>
+	</div>
+</Layout>

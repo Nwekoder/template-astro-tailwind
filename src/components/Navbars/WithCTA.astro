@@ -1,0 +1,45 @@
+---
+import { twMerge } from "tailwind-merge"
+
+import NavDropdown from "./_NavDropdown.astro"
+import LinkPrimary from "../Buttons/LinkPrimary.astro"
+
+const {position, dropdownAlignment} = Astro.props
+---
+
+<nav class={twMerge("flex items-center w-full h-16 bg-neutral-100", position == "fixed" ? "fixed top-0 left-0" : "", position == "absolute"? "absolute top-0 left-0" : "", position == "sticky"? "sticky top-0 left-0" : "")}>
+    <div class="flex items-center justify-between w-11/12 mx-auto">
+        <a href="/" class="text-2xl font-bold">LOGO</a>
+
+        <div class="flex items-center gap-4">
+            <a class="p-2" href="/">Home</a>
+            <a class="p-2" href="/projects">Projects</a>
+            <NavDropdown alignment={dropdownAlignment} title="Updates" links={[
+                {
+                    title: "Articles",
+                    href: "/posts/articles"
+                },
+                {
+                    title: "Blogs",
+                    href: "/posts/blogs"
+                },
+                {
+                    title: "Videos",
+                    href: "/posts/videos"
+                },
+            ]} />
+            <NavDropdown alignment={dropdownAlignment} title="Templates" links={[
+                {
+                    title: "Free",
+                    href: "/templates/free"
+                },
+                {
+                    title: "Request Custom",
+                    href: "/templates/custom"
+                },
+            ]} />
+        </div>
+
+        <LinkPrimary href="/contact">Contact Me</LinkPrimary>
+    </div>
+</nav>
